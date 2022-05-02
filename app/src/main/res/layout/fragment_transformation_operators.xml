@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="16dp"
+    tools:context=".ui.TransformationOperatorsFragment">
+
+    <HorizontalScrollView
+        android:id="@+id/hsv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="horizontal"
+        android:fadeScrollbars="false"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:id="@+id/llButtons"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginVertical="16dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnMap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/map" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnBuffer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/buffer" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnDebounce"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/debounce" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnThrottleFirst"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/throttle_first" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnFlatMap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/flatmap" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnConcatMap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/concat_map" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSwitchMap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/switch_map" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/tvOperationType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/transformation"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/tvInputLabel"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/tvInputLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/input"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/tvInput"
+        app:layout_constraintTop_toTopOf="@id/tvOperationType" />
+
+    <TextView
+        android:id="@+id/tvInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@id/tvOutputLabel"
+        app:layout_constraintTop_toTopOf="@id/tvInputLabel" />
+
+    <TextView
+        android:id="@+id/tvOutputLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/output"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/tvOutput"
+        app:layout_constraintTop_toBottomOf="@id/tvInput" />
+
+    <TextView
+        android:id="@+id/tvOutput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@id/hsv"
+        app:layout_constraintTop_toBottomOf="@id/tvOutputLabel" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.rxkotlin.ui.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_filterOperatorsFragment"
+            app:destination="@id/filterOperatorsFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_createOperatorsFragment"
+            app:destination="@id/createOperatorsFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_transformationOperatorsFragment"
+            app:destination="@id/transformationOperatorsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createOperatorsFragment"
+        android:name="com.example.rxkotlin.ui.CreateOperatorsFragment"
+        android:label="fragment_create_operators"
+        tools:layout="@layout/fragment_create_operators" />
+    <fragment
+        android:id="@+id/filterOperatorsFragment"
+        android:name="com.example.rxkotlin.ui.FilterOperatorsFragment"
+        android:label="fragment_filter_operators"
+        tools:layout="@layout/fragment_filter_operators" />
+    <fragment
+        android:id="@+id/transformationOperatorsFragment"
+        android:name="com.example.rxkotlin.ui.TransformationOperatorsFragment"
+        android:label="fragment_transformation_operators"
+        tools:layout="@layout/fragment_transformation_operators" />
+</navigation>

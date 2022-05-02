@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">RxKotlinExample</string>
+    <string name="create_operators">Create Operators</string>
+    <string name="filter_operators">Filter operators</string>
+    <string name="transformation_operators">Transformation Operators</string>
+    <string name="transformation">Transformation</string>
+    <string name="create">Create</string>
+    <string name="just">Just</string>
+    <string name="fromarray">From Array</string>
+    <string name="fromiterable">From Iterable</string>
+    <string name="from_callable">From Callable</string>
+    <string name="from_future">From Future</string>
+    <string name="from_publisher">From Publisher</string>
+    <string name="interval">Interval</string>
+    <string name="range">Range</string>
+    <string name="flowable">Flowable</string>
+    <string name="maybe">MayBe</string>
+    <string name="flatmap">FlatMap</string>
+    <string name="concat_map">Concat Map</string>
+    <string name="repeat">Repeat</string>
+    <string name="input">Input</string>
+    <string name="output">Output</string>
+    <string name="completed">Completed</string>
+    <string name="timer">Timer</string>
+    <string name="filter">Filter</string>
+    <string name="distinct">Distinct</string>
+    <string name="take">Take</string>
+    <string name="take_while">Take While</string>
+    <string name="map">Map</string>
+    <string name="buffer">Buffer</string>
+    <string name="debounce">Debounce</string>
+    <string name="throttle_first">Throttle First</string>
+    <string name="switch_map">Switch Map</string>
+</resources>

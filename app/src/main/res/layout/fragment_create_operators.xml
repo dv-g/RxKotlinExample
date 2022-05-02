@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="16dp"
+    tools:context=".ui.CreateOperatorsFragment">
+
+    <HorizontalScrollView
+        android:id="@+id/hsv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="horizontal"
+        android:fadeScrollbars="false"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:id="@+id/llButtons"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginVertical="16dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnCreate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/create" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnJust"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/just" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnRange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/range" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnRepeat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/repeat" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnInterval"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/interval" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnTimer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/timer" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnFromArray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fromarray" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnFromIterable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fromiterable" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnFromCallable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/from_callable" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnFromFuture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/from_future" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnFromPublisher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/from_publisher" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnFlowable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/flowable" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/tvOperationType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/create"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/tvInputLabel"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/tvInputLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/input"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/tvInput"
+        app:layout_constraintTop_toTopOf="@id/tvOperationType" />
+
+    <TextView
+        android:id="@+id/tvInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@id/tvOutputLabel"
+        app:layout_constraintTop_toTopOf="@id/tvInputLabel" />
+
+    <TextView
+        android:id="@+id/tvOutputLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/output"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/tvOutput"
+        app:layout_constraintTop_toBottomOf="@id/tvInput" />
+
+    <TextView
+        android:id="@+id/tvOutput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@id/hsv"
+        app:layout_constraintTop_toBottomOf="@id/tvOutputLabel" />
+</androidx.constraintlayout.widget.ConstraintLayout>
